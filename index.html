@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ebrahim Aboualmajd | Senior SEO Specialist & Growth Consultant</title>
+    <meta name="description" content="Portfolio of Ebrahim Aboualmajd, a Senior SEO Specialist with 6+ years of experience driving organic growth, traffic, and revenue for Global & GCC brands.">
+    <meta name="keywords" content="SEO Specialist, Technical SEO, International SEO, SEO Consultant Dubai, E-commerce SEO">
+    <meta name="author" content="Ebrahim Aboualmajd">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/">
+    <meta property="og:title" content="Ebrahim Aboualmajd | Senior SEO Specialist">
+    <meta property="og:description" content="Award-winning SEO strategies and measurable growth. View my latest case studies.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- VARIABLES & RESET --- */
+        :root {
+            --bg-dark: #0a192f;       /* Navy Blue Background */
+            --bg-light: #112240;      /* Lighter Navy for Cards */
+            --text-primary: #e6f1ff;  /* White-ish text */
+            --text-secondary: #8892b0;/* Muted text */
+            --accent: #64ffda;        /* Teal Green (Professional) */
+            --gold: #ffd700;          /* For Awards */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; transition: 0.3s; color: inherit; }
+        ul { list-style: none; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 5%;
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); cursor: pointer; }
+        .logo span { color: var(--accent); }
+        
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        
+        .btn-whatsapp {
+            background-color: #25D366; color: white;
+            padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem;
+            display: flex; align-items: center; gap: 5px;
+        }
+        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4); }
+
+        /* --- HERO SECTION (SLIDER EFFECT) --- */
+        .hero {
+            height: 100vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; padding: 0 10%;
+            background: radial-gradient(circle at 50% 50%, #112240 0%, #0a192f 70%);
+        }
+        
+        .hero-subtitle { color: var(--accent); font-family: monospace; font-size: 1.2rem; margin-bottom: 15px; }
+        
+        /* Text Slider Animation */
+        .hero-slider-text {
+            font-size: 4rem; font-weight: 700; color: #ccd6f6; margin-bottom: 20px;
+            position: relative; height: 80px; overflow: hidden;
+        }
+        .slider-wrapper {
+            display: flex; flex-direction: column;
+            animation: slideText 6s infinite;
+        }
+        .slider-item { height: 80px; display: flex; align-items: center; justify-content: center; }
+        
+        @keyframes slideText {
+            0%, 30% { transform: translateY(0); }
+            33%, 63% { transform: translateY(-80px); }
+            66%, 96% { transform: translateY(-160px); }
+            100% { transform: translateY(0); }
+        }
+
+        .hero p { max-width: 600px; color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 40px; }
+        .scroll-down { color: var(--accent); font-size: 2rem; animation: bounce 2s infinite; margin-top: 30px; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
+
+        /* --- ABOUT & INTRO --- */
+        .section { padding: 80px 10%; }
+        .section-header { display: flex; align-items: center; margin-bottom: 40px; font-size: 2rem; }
+        .section-header span { color: var(--accent); margin-right: 10px; font-family: monospace; font-size: 1.5rem; }
+        .section-header::after { content: ""; display: block; width: 200px; height: 1px; background: #233554; margin-left: 20px; }
+
+        .about-content { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+        .about-text { flex: 2; min-width: 300px; color: var(--text-secondary); font-size: 1.1rem; }
+        .about-stats { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .stat-card { background: var(--bg-light); padding: 20px; text-align: center; border-radius: 8px; border: 1px solid transparent; }
+        .stat-card:hover { border-color: var(--accent); }
+        .stat-card h3 { color: var(--accent); font-size: 2rem; margin-bottom: 5px; }
+        .stat-card p { font-size: 0.8rem; }
+
+        /* --- SKILLS --- */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; margin-top: 20px; }
+        .skill-tag {
+            background: var(--bg-light); color: var(--text-secondary); padding: 10px; 
+            border-radius: 4px; text-align: center; font-size: 0.9rem;
+            border: 1px solid #233554; transition: 0.3s;
+        }
+        .skill-tag:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
+
+        /* --- GENERAL PROJECTS (NOT CLICKABLE) --- */
+        .general-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .general-card {
+            background: var(--bg-light); padding: 20px; border-radius: 8px; 
+            text-align: center; opacity: 0.8; transition: 0.3s;
+            border: 1px solid transparent;
+        }
+        .general-card:hover { opacity: 1; border-color: #233554; }
+        
+        /* LOGO STYLES */
+        .project-logo {
+            width: 80px; height: 80px; object-fit: contain; margin-bottom: 15px;
+            background: white; padding: 10px; border-radius: 50%; /* لجعل اللوجو دائري */
+        }
+        .general-card h4 { font-size: 1.1rem; margin-bottom: 5px; color: var(--text-primary); }
+        .general-card p { font-size: 0.85rem; color: var(--text-secondary); }
+        
+        /* --- AWARDED PROJECTS (CLICKABLE) --- */
+        .awarded-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .award-card {
+            background: var(--bg-light); padding: 30px; border-radius: 10px;
+            transition: 0.3s; cursor: pointer; position: relative;
+            border: 1px solid transparent; overflow: hidden;
+        }
+        .award-card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7); }
+        
+        /* Golden Banner for Awards */
+        .award-badge {
+            position: absolute; top: 0; right: 0; background: var(--gold); color: #000;
+            padding: 5px 15px; font-size: 0.8rem; font-weight: bold; border-bottom-left-radius: 10px;
+        }
+
+        .award-card-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+        .award-card h3 { font-size: 1.5rem; color: var(--text-primary); }
+        .award-card .role { color: var(--accent); font-family: monospace; font-size: 0.9rem; }
+        .award-results { margin-top: 20px; background: rgba(100, 255, 218, 0.05); padding: 15px; border-radius: 5px; }
+        .award-results div { margin-bottom: 5px; font-size: 0.9rem; color: var(--text-primary); display: flex; align-items: center; gap: 8px; }
+
+        /* --- FOOTER --- */
+        footer { text-align: center; padding: 40px; background: #050f1f; color: var(--text-secondary); margin-top: 50px; }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; }
+        .footer-links a { font-size: 1.5rem; color: var(--text-secondary); }
+        .footer-links a:hover { color: var(--accent); }
+
+        /* --- MODALS (POPUP) --- */
+        .modal {
+            display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.85); backdrop-filter: blur(5px);
+            align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;
+        }
+        .modal.show { display: flex; opacity: 1; }
+        .modal-content {
+            background-color: #172a45; padding: 40px; border-radius: 10px;
+            width: 90%; max-width: 800px; max-height: 90vh; overflow-y: auto;
+            position: relative; border: 1px solid var(--accent);
+        }
+        .close-btn { position: absolute; top: 20px; right: 25px; color: white; font-size: 2rem; cursor: pointer; }
+        .modal-body h4 { color: var(--text-primary); margin-top: 25px; margin-bottom: 10px; border-left: 3px solid var(--accent); padding-left: 10px; }
+        .modal-body ul { margin-left: 20px; color: var(--text-secondary); }
+        .modal-body li { margin-bottom: 8px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-slider-text { font-size: 2.5rem; height: 60px; }
+            .slider-item { height: 60px; }
+            .section { padding: 60px 5%; }
+            .about-content { flex-direction: column; }
+            .nav-right { gap: 10px; }
+            .btn-whatsapp span { display: none; } /* Hide text on mobile, keep icon */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo" onclick="window.scrollTo(0,0)">EBRAHIM<span>.SEO</span></div>
+        <div class="nav-right">
+            <a href="https://wa.me/201063316146" target="_blank" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> <span>WhatsApp Me</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <p class="hero-subtitle" data-aos="fade-down">Hi, my name is Ebrahim</p>
+        
+        <div class="hero-slider-text">
+            <div class="slider-wrapper">
+                <div class="slider-item">Senior SEO Specialist</div>
+                <div class="slider-item">Growth Hacker</div>
+                <div class="slider-item">Award Winning Expert</div>
+            </div>
+        </div>
+
+        <p data-aos="fade-up" data-aos-delay="200">
+            Driving measurable growth and achieving key milestones across Global and GCC projects.
+        </p>
+        <a href="#intro" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <section id="intro" class="section">
+        <div class="section-header" data-aos="fade-right"><span>01.</span> About Me</div>
+        <div class="about-content">
+            <div class="about-text" data-aos="fade-up">
+                <p>
+                    I am an SEO professional with a proven record of leading cross-functional teams to deliver impactful SEO strategies. Skilled in technical optimization, keyword strategy, and performance analytics. I have a strong ability to adapt to the evolving landscape of AI and LLM-driven search.
+                </p>
+            </div>
+            <div class="about-stats" data-aos="zoom-in">
+                <div class="stat-card"><h3>6+</h3><p>Years Exp.</p></div>
+                <div class="stat-card"><h3>50+</h3><p>Projects</p></div>
+                <div class="stat-card"><h3>$2M+</h3><p>Revenue</p></div>
+                <div class="stat-card"><h3>6</h3><p>Awards</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="section-header" data-aos="fade-right"><span>02.</span> My Skills</div>
+        <div class="skills-grid" data-aos="fade-up">
+            <div class="skill-tag">SEO Strategy</div>
+            <div class="skill-tag">Technical SEO</div>
+            <div class="skill-tag">E-commerce SEO</div>
+            <div class="skill-tag">International SEO</div>
+            <div class="skill-tag">Google Search Console</div>
+            <div class="skill-tag">Team Leadership</div>
+            <div class="skill-tag">Off-page Optimization</div>
+            <div class="skill-tag">On-page Optimization</div>
+            <div class="skill-tag">Attention to Detail</div>
+            <div class="skill-tag">Data Analytics</div>
+        </div>
+    </section>
+
+    <section class="section" style="background: #0d1e38;">
+        <div class="section-header" data-aos="fade-right"><span>03.</span> Projects Worked On</div>
+        <p style="color: #8892b0; margin-bottom: 30px;">A selection of brands I've helped grow (Non-Awarded / General):</p>
+        
+        <div class="general-grid">
+            <div class="general-card" data-aos="fade-up">
+                <img src="https://via.placeholder.com/80" alt="Project Logo" class="project-logo">
+                <h4>Retail Client</h4>
+                <p>E-commerce SEO</p>
+            </div>
+
+            <div class="general-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://via.placeholder.com/80" alt="Project Logo" class="project-logo">
+                <h4>Medical Blog</h4>
+                <p>Content Strategy</p>
+            </div>
+
+            <div class="general-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://via.placeholder.com/80" alt="Project Logo" class="project-logo">
+                <h4>Local Service</h4>
+                <p>Local SEO</p>
+            </div>
+
+            <div class="general-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://via.placeholder.com/80" alt="Project Logo" class="project-logo">
+                <h4>Tech Startup</h4>
+                <p>SaaS SEO</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="section-header" data-aos="fade-right"><span>04.</span> Awarded Case Studies</div>
+        
+        <div class="awarded-grid">
+            
+            <div class="award-card" onclick="openModal('modal-aeon')" data-aos="fade-up">
+                <div class="award-badge">🏆 Global Winner</div>
+                <div class="award-card-header">
+                    <img src="https://via.placeholder.com/60" alt="Aeon Logo" class="project-logo" style="margin-bottom:0; width:60px; height:60px;">
+                    <div>
+                        <h3>AEON Clinic</h3>
+                        <span class="role">Medical SEO</span>
+                    </div>
+                </div>
+                <p>Leading regenerative wellness center. Winner of MENA Search Award & Digital Awards.</p>
+                <div class="award-results">
+                    <div><i class="fas fa-check-circle" style="color: var(--accent);"></i> +125% Organic Clicks</div>
+                    <div><i class="fas fa-check-circle" style="color: var(--accent);"></i> +100% Organic Users</div>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.8rem; color: var(--accent); text-align: right;">Click for details &rarr;</p>
+            </div>
+
+            <div class="award-card" onclick="openModal('modal-leos')" data-aos="fade-up" data-aos-delay="100">
+                <div class="award-badge">🏆 Best Global SEO</div>
+                <div class="award-card-header">
+                    <img src="https://via.placeholder.com/60" alt="Leos Logo" class="project-logo" style="margin-bottom:0; width:60px; height:60px;">
+                    <div>
+                        <h3>LEOS Development</h3>
+                        <span class="role">Real Estate</span>
+                    </div>
+                </div>
+                <p>UK-based luxury developer. Best Performance SEO Campaign 2024.</p>
+                <div class="award-results">
+                    <div><i class="fas fa-check-circle" style="color: var(--accent);"></i> +90% Impressions (UAE)</div>
+                    <div><i class="fas fa-check-circle" style="color: var(--accent);"></i> +45% Leads</div>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.8rem; color: var(--accent); text-align: right;">Click for details &rarr;</p>
+            </div>
+
+            <div class="award-card" onclick="openModal('modal-mobi')" data-aos="fade-up" data-aos-delay="200">
+                <div class="award-badge">🏆 Best Innovation</div>
+                <div class="award-card-header">
+                    <img src="https://via.placeholder.com/60" alt="Mobimatter Logo" class="project-logo" style="margin-bottom:0; width:60px; height:60px;">
+                    <div>
+                        <h3>Mobimatter</h3>
+                        <span class="role">eSIM / Telecom</span>
+                    </div>
+                </div>
+                <p>Best Innovation SEO Campaign in MENA Search Award 2023.</p>
+                <div class="award-results">
+                    <div><i class="fas fa-check-circle" style="color: var(--accent);"></i> +112% Organic Users</div>
+                    <div><i class="fas fa-check-circle" style="color: var(--accent);"></i> +113% Purchases</div>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.8rem; color: var(--accent); text-align: right;">Click for details &rarr;</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/eaboualmajd/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:Ebrahim.aboualmajd@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/201063316146" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2025 Ebrahim Aboualmajd. Built for SEO.</p>
+    </footer>
+
+    <div id="modal-aeon" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-aeon')">&times;</span>
+            <h2>AEON Clinic (Medical)</h2>
+            <div class="modal-body">
+                <p>Aeon Clinic is a leading regenerative wellness center. The goal was to enhance visibility in the UAE market.</p>
+                <h4>🏆 Awards Won</h4>
+                <ul>
+                    <li>Best Low Budget SEO Campaign (Global)</li>
+                    <li>Best Use of Search In Health (MENA Search Award)</li>
+                    <li>Best Use Of Digital By Sector – HealthCare</li>
+                </ul>
+                <h4>📊 Key Results (12-Month Goals)</h4>
+                <ul>
+                    <li><strong>Organic Clicks:</strong> Increased by 125% (2,902 to 6,530).</li>
+                    <li><strong>Organic Users:</strong> Increased by 100% (1,973 to 3,946).</li>
+                    <li><strong>Organic Sessions:</strong> Increased by 125% (3,168 to 7,128).</li>
+                    <li><strong>Engagement Rate:</strong> Increased from 59% to 74%.</li>
+                    <li><strong>Rankings:</strong> Keywords on 1st page increased by 75% (27 to 47).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-leos" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-leos')">&times;</span>
+            <h2>LEOS Development (Real Estate)</h2>
+            <div class="modal-body">
+                <p>UK-based luxury property developer entering the UAE market.</p>
+                <h4>🏆 Awards Won</h4>
+                <ul>
+                    <li>Best Global SEO Campaign (Large) - Global Search Awards 2024</li>
+                    <li>Best Performance SEO Campaign 2024</li>
+                </ul>
+                <h4>📊 Key Results</h4>
+                <ul>
+                    <li><strong>Overall Users:</strong> Increased by 40% (1,374 to 2,000).</li>
+                    <li><strong>UAE Impressions:</strong> Increased by 90% to double visibility.</li>
+                    <li><strong>UAE Clicks:</strong> Increased by 60% (635 to 1,000).</li>
+                    <li><strong>Rankings:</strong> 40 Keywords in Top 10 search results.</li>
+                    <li><strong>Leads:</strong> +45% increase in lead inquiry forms.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-mobi" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-mobi')">&times;</span>
+            <h2>Mobimatter (Telecom/eSIM)</h2>
+            <div class="modal-body">
+                <p>Online reseller of mobile telecom services (eSIMs) targeting US, UK, UAE, and Germany.</p>
+                <h4>🏆 Awards Won</h4>
+                <ul>
+                    <li>Best Innovation SEO Campaign (MENA Search Award 2023)</li>
+                    <li>Best Use of Digital - Tech (MENA Digital Award 2023)</li>
+                </ul>
+                <h4>📊 Key Results</h4>
+                <ul>
+                    <li><strong>Organic Users:</strong> +112.87% (49k to 104k).</li>
+                    <li><strong>Organic Purchases:</strong> +113% increase (2,921 to 16,036 orders).</li>
+                    <li><strong>Keyword Rankings:</strong> Exploded from 152 to 1,103 keywords on Page 1.</li>
+                    <li><strong>Core Web Vitals:</strong> 99.4% Good URLs on Mobile.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animation
+        AOS.init({ duration: 800, once: true });
+
+        // Modal Logic
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+</html>
